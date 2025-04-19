@@ -1,0 +1,143 @@
+:root{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue1: hsl(211, 68%, 94%);
+    --Light-grayish-blue2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+html{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--Dark-grayish-blue);
+    font-size: 15px;
+}
+
+body{
+    padding: 1rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+header p {
+    width: fit-content;
+}
+
+h1{
+    font-size: 1.35rem;
+    font-weight: 800;
+    width: fit-content;
+    color: var(--Very-dark-blue);
+}
+
+b{
+    color: var(--Very-dark-blue);
+}
+
+.post{
+    font-weight: 600;
+}
+
+.group{
+    color: var(--Blue);
+    font-weight: 700;
+}
+
+.date{
+    color: var(--Grayish-blue);
+}
+
+.title_container{
+    display: flex;
+}
+
+.new_notifs_counter{
+    font-weight: 600;
+    width: fit-content;
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 0.1rem 0.65rem 0.2rem;
+    border-radius: 0.4rem;
+    margin-left: 0.5rem;
+}
+
+header p{
+    text-align: right;
+    text-wrap: nowrap;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1rem 0;
+}
+
+.notification{
+    display: flex;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.notification img{
+    width: 45px;
+    height: 45px;
+    margin-right: 1rem;
+}
+
+.message{
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--Light-grayish-blue2);
+    border-radius: 0.2rem;
+    font-weight: 500;
+}
+
+/*design des nouvelles notifs*/
+
+.new_notif{
+    background-color: var(--Very-light-grayish-blue);
+}
+
+.new_notif p:nth-child(1):after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: var(--Red);
+    border-radius: 9999px;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+header, aside{
+    max-width: 650px;
+    margin: auto;
+}
+
+@media screen and (min-width:800px) {
+    html{
+        font-size: 16px;
+    }
+}
